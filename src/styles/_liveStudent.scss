@@ -1,13 +1,16 @@
 .liveStudentCard{
-    width: 100%;
-    height: 264.75px;
+    width: 10%;
+    margin: 10px;
+    height: 100%;
 }
 
 .sharkTankCard{
-    width: 8%;
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-flow: wrap row;
+    
 }
-.card-body{
-    height: 100%;
+
+.sharkTank{
+    width: 100%;
 }
