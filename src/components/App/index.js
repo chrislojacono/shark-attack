@@ -5,7 +5,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <h2>Shark Tank</h2>
+        <h1>Shark Tank</h1>
          <SharkTank />
       </div>
     );
