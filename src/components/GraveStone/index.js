@@ -4,8 +4,13 @@ import {
   CardBody,
   CardTitle,
 } from 'reactstrap';
+import studentShape from '../../helpers/props/studentShape';
 
 class GraveStone extends React.Component {
+  static propTypes = {
+    student: studentShape,
+  }
+
   render() {
     const { student } = this.props;
     return (

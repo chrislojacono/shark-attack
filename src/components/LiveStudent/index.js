@@ -4,10 +4,14 @@ import {
   CardImg,
   CardBody,
   CardTitle,
-  Button,
 } from 'reactstrap';
+import studentShape from '../../helpers/props/studentShape';
 
 class LiveStudents extends React.Component {
+  static propTypes = {
+    student: studentShape,
+  }
+
   render() {
     const { student } = this.props;
     return (
