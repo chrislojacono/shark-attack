@@ -6,11 +6,7 @@ class App extends React.Component {
     return (
       <div className='App'>
         <h2>Shark Tank</h2>
-        <button>Test</button>
-        <div className="sharkTank">
          <SharkTank />
-        </div>
-        <div></div>
       </div>
     );
   }
