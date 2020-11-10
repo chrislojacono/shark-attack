@@ -30,20 +30,26 @@ class SharkTank extends React.Component {
       deadStudents: this.state.deadStudents.concat(randomStudent),
     });
     return (
-      <Alert show='true' color='danger'>{randomStudent.name} has been eaten alive!!!</Alert>
+      <Alert show='true' color='danger'>
+        {randomStudent.name} has been eaten alive!!!
+      </Alert>
     );
   };
 
   render() {
     const { deadStudents } = this.state;
     return (
-      <div className='sharkTankCard'>
-        {this.state.students.map((student) => (
-          <LiveStudents key={student.name} student={student} />
-        ))}
-        <Graveyard deadStudents={deadStudents}/>
-        <button onClick={this.followTheLight}>Tester</button>
-      </div>
+      <>
+        <button className='btn btn-danger' onClick={this.followTheLight}>
+          Someone gets eaten!!
+        </button>
+        <div className='sharkTankCard'>
+          {this.state.students.map((student) => (
+            <LiveStudents key={student.name} student={student} />
+          ))}
+          <Graveyard deadStudents={deadStudents} />
+        </div>
+      </>
     );
   }
 }
