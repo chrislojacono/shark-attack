@@ -3,4 +3,14 @@
     width: 100%;
     display: flex;
     flex-flow: wrap row;
+    height: 100%;
+}
+.gravestoneCard{
+    background-image: url('https://media.wired.com/photos/5926a817cefba457b079aba4/master/w_2560%2Cc_limit/GravestoneTA-186755520.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 10%;
+    margin: 10px;
+    height: 100%;
+    color: white;
 }
