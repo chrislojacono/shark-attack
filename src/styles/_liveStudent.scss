@@ -4,13 +4,13 @@
     height: 100%;
 }
 
-.sharkTankCard{
+.sharkTank{
     width: 100%;
     display: flex;
     flex-flow: wrap row;
-    
+    background-color: rgb(100, 124, 197);
+    background-image: url('https://www.quasarex.com/wp-content/uploads/2018/11/Sharks-in-galapagos-banner.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.sharkTank{
-    width: 100%;
-}

@@ -41,14 +41,14 @@ class SharkTank extends React.Component {
     return (
       <>
         <button className='btn btn-danger' onClick={this.followTheLight}>
-          Someone gets eaten!!
+          SHARK ATTACK!!!!
         </button>
-        <div className='sharkTankCard'>
+        <div className='sharkTank'>
           {this.state.students.map((student) => (
             <LiveStudents key={student.name} student={student} />
           ))}
-          <Graveyard deadStudents={deadStudents} />
         </div>
+         <Graveyard deadStudents={deadStudents} />
       </>
     );
   }

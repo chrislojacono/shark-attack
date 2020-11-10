@@ -11,18 +11,15 @@ class LiveStudents extends React.Component {
   render() {
     const { student } = this.props;
     return (
-      <div className="liveStudentCard">
-        <Card >
+        <Card className="liveStudentCard">
           <CardImg
             src={student.imgUrl}
             alt='Card image cap'
           />
           <CardBody>
             <CardTitle tag='h5'>{student.name}</CardTitle>
-            <Button>Button</Button>
           </CardBody>
         </Card>
-      </div>
     );
   }
 }

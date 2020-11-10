@@ -9,7 +9,7 @@ class GraveStone extends React.Component {
   render() {
     const { student } = this.props;
     return (
-        <Card className="gravestoneCard" >
+        <Card className="gravestoneCard">
           <CardBody>
             <CardTitle tag='h5'>{student.name}</CardTitle>
           </CardBody>

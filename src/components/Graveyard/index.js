@@ -4,7 +4,7 @@ import GraveStone from '../GraveStone';
 export default class Graveyard extends Component {
   render() {
     return (
-      <div className='GraveYard'>
+      <div className="GraveYard">
         {this.props.deadStudents.map((student) => (
           <GraveStone key={student.name} student={student} />
         ))}
