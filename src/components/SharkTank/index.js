@@ -5,24 +5,38 @@ import getAllStudents from '../../helpers/data/studentsData';
 class SharkTank extends React.Component {
   state = {
     students: [],
+    deadStudents: [],
   };
 
   componentDidMount() {
-    this.test();
+    this.studentApiCall();
   }
 
-  test = () => {
+  studentApiCall = () => {
     getAllStudents().then((response) => this.setState({ students: response }));
+  };
+
+  followTheLight = () => {
+    const randomStudent = this.state.students[
+      Math.floor(Math.random() * this.state.students.length)
+    ];
+    const newStudentsArray = this.state.students.filter(
+      (student) => student !== randomStudent,
+    );
+    this.setState({
+      students: newStudentsArray,
+      deadStudents: randomStudent,
+    });
   };
 
   render() {
     return (
-        <div className='sharkTankCard'>
-            {this.state.students.map((student) => (
+      <div className='sharkTankCard'>
+        {this.state.students.map((student) => (
           <LiveStudents key={student.name} student={student} />
-            ))}
-    </div>
-
+        ))}
+        <button onClick={this.followTheLight}>Tester</button>
+      </div>
     );
   }
 }

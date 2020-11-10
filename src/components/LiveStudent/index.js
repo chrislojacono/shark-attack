@@ -14,8 +14,6 @@ class LiveStudents extends React.Component {
       <div className="liveStudentCard">
         <Card >
           <CardImg
-            top
-            width='30px'
             src={student.imgUrl}
             alt='Card image cap'
           />
