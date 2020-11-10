@@ -1,5 +1,7 @@
 import React from 'react';
+import { Alert } from 'reactstrap';
 import LiveStudents from '../LiveStudent';
+import Graveyard from '../Graveyard';
 import getAllStudents from '../../helpers/data/studentsData';
 
 class SharkTank extends React.Component {
@@ -25,16 +27,21 @@ class SharkTank extends React.Component {
     );
     this.setState({
       students: newStudentsArray,
-      deadStudents: randomStudent,
+      deadStudents: this.state.deadStudents.concat(randomStudent),
     });
+    return (
+      <Alert show='true' color='danger'>{randomStudent.name} has been eaten alive!!!</Alert>
+    );
   };
 
   render() {
+    const { deadStudents } = this.state;
     return (
       <div className='sharkTankCard'>
         {this.state.students.map((student) => (
           <LiveStudents key={student.name} student={student} />
         ))}
+        <Graveyard deadStudents={deadStudents}/>
         <button onClick={this.followTheLight}>Tester</button>
       </div>
     );
