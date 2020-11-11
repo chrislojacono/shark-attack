@@ -1,9 +1,8 @@
 import React from 'react';
-import { Alert } from 'reactstrap';
+import ReactCSSTransitionGroup from 'react-transition-group';
 import LiveStudents from '../LiveStudent';
 import Graveyard from '../Graveyard';
 import getAllStudents from '../../helpers/data/studentsData';
-import sharkImage from '../../helpers/p07k4hnq.jpg';
 
 class SharkTank extends React.Component {
   state = {
@@ -30,11 +29,6 @@ class SharkTank extends React.Component {
       students: newStudentsArray,
       deadStudents: this.state.deadStudents.concat(randomStudent),
     });
-    return (
-      <Alert show='true' color='danger'>
-        {randomStudent.name} has been eaten alive!!!
-      </Alert>
-    );
   };
 
   render() {
@@ -43,7 +37,6 @@ class SharkTank extends React.Component {
       <>
         <button className='btn btn-danger' onClick={this.followTheLight}>
           SHARK ATTACK!!!
-          <img className="sharkBtn" src={sharkImage} alt="shark"/>
         </button>
         <div className='sharkTank'>
           {this.state.students.map((student) => (
