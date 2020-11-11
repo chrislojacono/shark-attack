@@ -16,3 +16,20 @@
     height: 100px;
     object-fit: cover;
 }
+.liveStudentTransition-enter {
+    opacity: 0.01;
+  }
+  
+  .liveStudentTransition-enter.liveStudentTransition-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  
+  .liveStudentTransition-leave {
+    opacity: 1;
+  }
+  
+  .liveStudentTransition-leave.liveStudentTransition-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }

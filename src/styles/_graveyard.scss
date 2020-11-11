@@ -4,13 +4,13 @@
     display: flex;
     flex-flow: wrap row;
     height: 500px;
-    background-image: url('https://image.freepik.com/free-photo/graveyard-silhouette-background_42665-12.jpg');
+    background-image: linear-gradient(rgba(144, 171, 209, 0.432), rgba(117, 74, 105, 0.418) ), url('https://image.freepik.com/free-photo/graveyard-silhouette-background_42665-12.jpg');
     background-size: cover;
     background-position: center;
 
 }
 .gravestoneCard{
-    background-image: url('https://media.wired.com/photos/5926a817cefba457b079aba4/master/w_2560%2Cc_limit/GravestoneTA-186755520.jpg');
+    background-image:url('https://media.wired.com/photos/5926a817cefba457b079aba4/master/w_2560%2Cc_limit/GravestoneTA-186755520.jpg');
     background-size: cover;
     background-position: center;
     width: 10%;
