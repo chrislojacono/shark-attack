@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-transition-group';
 import LiveStudents from '../LiveStudent';
 import Graveyard from '../Graveyard';
 import getAllStudents from '../../helpers/data/studentsData';
